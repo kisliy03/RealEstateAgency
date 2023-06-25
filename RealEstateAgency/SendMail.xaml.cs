@@ -77,9 +77,9 @@ namespace RealEstateAgency
                 {
                     var emTo = db.Owners.Where(x => x.id == idTempOwner).FirstOrDefault();
 
-                    //var mail = CreateMail("Менеджер", "yaparser1208@gmail.com", emTo.Email, "Договор", "Договор");
-                    //mail.Attachments.Add(new Attachment(path));
-                    //SendEmail("smtp.gmail.com", 587, "yaparser1208@gmail.com", "zybwpilqxozerseg", mail);
+                    var mail = CreateMail("Менеджер", "yaparser1208@gmail.com", emTo.email, "Договор", "Договор");
+                    mail.Attachments.Add(new Attachment(path));
+                    SendEmail("smtp.gmail.com", 587, "yaparser1208@gmail.com", "zybwpilqxozerseg", mail);
                 }
                 else
                 {

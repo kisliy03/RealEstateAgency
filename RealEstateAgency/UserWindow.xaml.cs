@@ -158,7 +158,15 @@ namespace RealEstateAgency
             string Region = worksheet.Cells[1, 5].Value.ToString();
             string Metro = worksheet.Cells[1, 6].Value.ToString();
             int Rooms = Convert.ToInt32(worksheet.Cells[1, 7].Value.ToString());
-            int Floor = Convert.ToInt32(worksheet.Cells[1, 9].Value.ToString().Split('/')[0].Trim());
+            int Floor = 3;
+            try
+            {
+                Floor = Convert.ToInt32(worksheet.Cells[1, 9].Value.ToString().Split('/')[0].Trim());
+            }
+            catch (Exception ex)
+            {
+                Floor = 3;
+            }
             string[] Price = worksheet.Cells[1, 10].Value.ToString().Split(' ');
             string Comment = worksheet.Cells[1, 11].Value.ToString();
             string ResultPrice = "";

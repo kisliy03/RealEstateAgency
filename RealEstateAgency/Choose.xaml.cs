@@ -43,7 +43,7 @@ namespace RealEstateAgency
             var list = db.Client.ToList();
             foreach (var item in list)
             {
-                cbPokypatel.Items.Add(item.Surname);
+                cbPokypatel.Items.Add(item.Surname + " " + item.Name + " " + item.lastName);
             }
         }
 
@@ -53,7 +53,7 @@ namespace RealEstateAgency
             var list = db.Owners.ToList();
             foreach (var item in list)
             {
-                cbOwner.Items.Add(item.Name);
+                cbOwner.Items.Add(item.Name + " " + item.Surname + " " + item.lastName);
             }
         }
 
@@ -61,8 +61,10 @@ namespace RealEstateAgency
         {
             if (cbOwner.SelectedItem != null && cbPokypatel.SelectedItem != null)
             {
-                var pokypatel = db.Client.Where(x => x.Surname == cbPokypatel.Text).FirstOrDefault();
-                var owner = db.Owners.Where(x => x.Name == cbOwner.Text).FirstOrDefault();
+                var pokyp = cbPokypatel.Text.Split(' ')[0];
+                var ow = cbOwner.Text.Split(' ')[0];
+                var pokypatel = db.Client.Where(x => x.Surname == pokyp).FirstOrDefault();
+                var owner = db.Owners.Where(x => x.Name == ow).FirstOrDefault();
                 var ap = db.Apartments
                             .Where(c => c.id == apart.id)
                             .FirstOrDefault();

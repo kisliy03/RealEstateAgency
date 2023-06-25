@@ -61,7 +61,7 @@ namespace RealEstateAgency
                     cellWithData = workbookWithDataAndFormula.Worksheets[0].Cells["C" + (i + 5).ToString()];
                     cellWithData.Value = owner[i].date_sale.ToShortDateString();
                     cellWithData = workbookWithDataAndFormula.Worksheets[0].Cells["D" + (i + 5).ToString()];
-                    //cellWithData.Value = owner[i].Apartments.region;
+                    cellWithData.Value = owner[i].Apartments.Region.TItile;
                     cellWithData = workbookWithDataAndFormula.Worksheets[0].Cells["E" + (i + 5).ToString()];
                     cellWithData.Value = owner[i].Apartments.Price;
                 }
