@@ -1,0 +1,28 @@
+﻿<Window x:Class="RealEstateAgency.ReportData"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RealEstateAgency"
+        mc:Ignorable="d"
+        Title="Выбор даты" Height="300" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="127*"></ColumnDefinition>
+            <ColumnDefinition Width="273*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">С какой даты:</Label>
+        <Label Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">По какую дату:</Label>
+
+        <TextBox x:Name="tbStartDate" Grid.Column="1" Margin="10"></TextBox>
+        <TextBox x:Name="tbEndDate" Grid.Column="1" Grid.Row="1" Margin="10"></TextBox>
+        <Button x:Name="tbConfirm" Grid.Row="2" Grid.ColumnSpan="2" Height="auto" Click="tbConfirm_Click">Отправить</Button>
+    </Grid>
+</Window>

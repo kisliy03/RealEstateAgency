@@ -1,0 +1,74 @@
+﻿
+    
+    <Window x:Class="RealEstateAgency.ObjectCard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RealEstateAgency"
+        mc:Ignorable="d"
+        Title="Карточка объекта недвижимости" WindowState="Maximized" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Image x:Name="imageObj" Grid.ColumnSpan="3" Grid.RowSpan="8"/>
+        <TextBlock Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16">Наименование</TextBlock>
+        <TextBlock x:Name="tbObjName" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15"></TextBlock>
+
+        <TextBlock Grid.Column="3" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16">Метро:</TextBlock>
+        <TextBlock x:Name="tbMetro" Grid.Column="4" Grid.Row="2" VerticalAlignment="Center" FontSize="15"></TextBlock>
+
+
+        <TextBlock Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16">Число комнат: </TextBlock>
+        <TextBlock x:Name="tbCountRooms" Grid.Column="4" Grid.Row="3" VerticalAlignment="Center" FontSize="15"></TextBlock>
+
+        <TextBlock Grid.Column="3" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16">Адрес:</TextBlock>
+        <TextBlock x:Name="tbAddress" Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="4" VerticalAlignment="Center" FontSize="15"></TextBlock>
+
+        <TextBlock Grid.Column="3" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16">Площадь:</TextBlock>
+        <TextBlock x:Name="tbArea" Grid.Column="4" Grid.Row="5" VerticalAlignment="Center" FontSize="15"></TextBlock>
+
+        <TextBlock Grid.Column="3" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16">Этаж:</TextBlock>
+        <TextBlock x:Name="tbFloor" Grid.Column="4" Grid.Row="6" VerticalAlignment="Center" FontSize="15"></TextBlock>
+
+        <TextBlock Grid.Column="3" Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16">Цена:</TextBlock>
+        <TextBlock x:Name="tbPrice" Grid.Column="4" Grid.Row="7" VerticalAlignment="Center" FontSize="15"></TextBlock>
+
+        <TextBlock Grid.Column="3" Grid.Row="8" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16">Ссылка:</TextBlock>
+        <TextBlock Grid.Column="4" Grid.Row="8" Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="15">
+            <Hyperlink x:Name="hlLink" Click="hlLink_Click" >Объявление</Hyperlink>
+        </TextBlock>
+
+        <TextBlock Grid.Row="9" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16">Коментарий</TextBlock>
+        <ScrollViewer Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="5" Grid.RowSpan="4">
+            <TextBlock x:Name="tbComent" FontSize="15"></TextBlock>
+        </ScrollViewer>
+
+        <Button x:Name="btnCreateDog" Width="250" Grid.Column="0" Grid.Row="13" Grid.ColumnSpan="2" Click="btnCreateDog_Click">Составить договор</Button>
+        <Button x:Name="btnSendDog" IsEnabled="False" Width="250" Grid.Column="2" Grid.Row="13" Grid.ColumnSpan="2" Click="btnSendDog_Click">Отправить договор</Button>
+        <Button x:Name="btnSendCard" Width="250" Grid.Column="4" Grid.Row="13" Grid.ColumnSpan="2" Click="btnSendCard_Click">Отправить карточку</Button>
+        <Button x:Name="btnSpravka" VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Column="5" Click="btnSpravka_Click">Справка</Button>
+    </Grid>
+</Window>
